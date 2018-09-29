@@ -1,6 +1,25 @@
 var hours, minutes, to, past, nbsps;
 var progress;
-var chars = 'abcdefghijklmnopqrstuvwxyz';
+var chars = 'abcdefghjklmnopqrstuvwxyz';
+
+document.onclick = function (argument) {
+
+    var docelem = document.documentElement;
+
+    if (docelem.requestFullscreen) {
+        docelem.requestFullscreen();
+    }
+    else if (docelem.mozRequestFullScreen) {
+        docelem.mozRequestFullScreen();
+    }
+    else if (docelem.webkitRequestFullScreen) {
+        docelem.webkitRequestFullScreen();
+    }
+    else if (docelem.msRequestFullscreen) {
+        docelem.msRequestFullscreen();
+    }
+}
+
 
 var changed = function() {
 	var now = new Date();
